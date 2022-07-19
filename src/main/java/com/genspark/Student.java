@@ -3,12 +3,10 @@ package com.genspark;
 import java.util.List;
 
 public class Student implements Print {
-
     private int id;
     private String name;
-    private String ph;
     private Address add;
-    //    private List<Phone> ph;
+    private List<Phone> ph;
 
     public int getId() {
         return id;
@@ -26,15 +24,7 @@ public class Student implements Print {
         this.name = name;
     }
 
-    public String getPh() {
-        return ph;
-    }
-
-    public void setPh(String ph) {
-        this.ph = ph;
-    }
-
-    public Address getAdd(Address add) {
+    public Address getAdd() {
         return add;
     }
 
@@ -42,13 +32,21 @@ public class Student implements Print {
         this.add = add;
     }
 
+    public List<Phone> getPh() {
+        return ph;
+    }
+
+    public void setPh(List<Phone> ph) {
+        this.ph = ph;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", ph=" + ph +
                 ", add=" + add +
+                ", ph=" + ph +
                 '}';
     }
 
