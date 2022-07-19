@@ -1,13 +1,13 @@
 package com.genspark;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-/**
- * Hello world!
- *
- */
-public class App 
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Spring" );
+        ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
+        Print obj = (Print) context.getBean("Print");
+        obj.print();
     }
 }
